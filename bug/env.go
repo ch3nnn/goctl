@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sliveryou/goctl/internal/version"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/version"
 )
 
 type env map[string]string

@@ -3,9 +3,9 @@ package rpc
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/internal/cobrax"
-	"github.com/sliveryou/goctl/rpc/cli"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/cobrax"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/cli"
 )
 
 var (

@@ -4,10 +4,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sliveryou/goctl/pkg/goctl"
-	"github.com/sliveryou/goctl/pkg/golang"
-	"github.com/sliveryou/goctl/rpc/execx"
-	"github.com/sliveryou/goctl/util/env"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/goctl"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/golang"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/env"
 )
 
 const (

@@ -1,8 +1,8 @@
 package migrationnotes
 
 import (
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
 )
 
 // BeforeCommands run before comamnd run to show some migration notes

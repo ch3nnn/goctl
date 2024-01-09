@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/sliveryou/goctl/pkg/parser/api/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/parser"
 )
 
 // File formats the api file.
@@ -18,7 +18,7 @@ func File(filename string) error {
 	if err := Source(data, buffer); err != nil {
 		return err
 	}
-	return os.WriteFile(filename, buffer.Bytes(), 0666)
+	return os.WriteFile(filename, buffer.Bytes(), 0o666)
 }
 
 // Source formats the api source.

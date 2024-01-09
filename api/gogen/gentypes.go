@@ -8,11 +8,11 @@ import (
 	"path"
 	"strings"
 
-	"github.com/sliveryou/goctl/api/spec"
-	apiutil "github.com/sliveryou/goctl/api/util"
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	apiutil "gitlab.bolean.com/sa-micro-team/goctl/api/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
 )
 
 const typesFile = "types"

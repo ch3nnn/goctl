@@ -6,7 +6,7 @@ import (
 
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 
-	"github.com/sliveryou/goctl/model/sql/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/util"
 )
 
 const indexPri = "PRIMARY"

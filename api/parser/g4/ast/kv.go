@@ -3,7 +3,7 @@ package ast
 import (
 	"strings"
 
-	"github.com/sliveryou/goctl/api/parser/g4/gen/api"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser/g4/gen/api"
 )
 
 // KvExpr describes key-value for api

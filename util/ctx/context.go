@@ -4,7 +4,7 @@ import (
 	"errors"
 	"path/filepath"
 
-	"github.com/sliveryou/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
 )
 
 var errModuleCheck = errors.New("the work directory must be found in the go mod or the $GOPATH")

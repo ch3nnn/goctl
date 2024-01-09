@@ -9,7 +9,7 @@ import (
 
 	"github.com/zeromicro/go-zero/core/syncx"
 
-	"github.com/sliveryou/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
 )
 
 func cancelOnSignals() {

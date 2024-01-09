@@ -6,9 +6,9 @@ package server
 import (
 	"context"
 
-	eventlogic "github.com/sliveryou/goctl/example/rpc/hi/internal/logic/event"
-	"github.com/sliveryou/goctl/example/rpc/hi/internal/svc"
-	"github.com/sliveryou/goctl/example/rpc/hi/pb/hi"
+	eventlogic "gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/internal/logic/event"
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/internal/svc"
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/pb/hi"
 )
 
 type EventServer struct {

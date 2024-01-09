@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 // projectFromGoPath is used to find the main module and project file path

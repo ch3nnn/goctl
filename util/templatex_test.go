@@ -3,7 +3,7 @@ package util
 import (
 	"testing"
 
-	"github.com/sliveryou/goctl/test"
+	"gitlab.bolean.com/sa-micro-team/goctl/test"
 )
 
 func TestIsTemplate(t *testing.T) {

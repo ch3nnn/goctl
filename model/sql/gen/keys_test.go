@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/model/sql/parser"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 func TestGenCacheKeys(t *testing.T) {

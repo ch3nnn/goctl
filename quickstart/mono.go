@@ -7,10 +7,10 @@ import (
 
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/sliveryou/goctl/api/gogen"
-	"github.com/sliveryou/goctl/pkg/golang"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/gogen"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/golang"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 var (

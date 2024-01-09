@@ -5,10 +5,10 @@ import (
 	"os"
 	"path/filepath"
 
-	conf "github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/rpc/parser"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
+	conf "gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 //go:embed config.tpl

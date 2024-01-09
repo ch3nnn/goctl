@@ -4,7 +4,7 @@ import (
 	"github.com/zeromicro/go-zero/core/load"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/sliveryou/goctl/cmd"
+	"gitlab.bolean.com/sa-micro-team/goctl/cmd"
 )
 
 func main() {

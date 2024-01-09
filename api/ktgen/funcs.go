@@ -8,7 +8,7 @@ import (
 
 	"github.com/iancoleman/strcase"
 
-	"github.com/sliveryou/goctl/api/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/util"
 )
 
 var funcsMap = template.FuncMap{

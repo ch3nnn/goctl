@@ -9,8 +9,8 @@ import (
 
 	"github.com/zeromicro/antlr"
 
-	"github.com/sliveryou/goctl/api/parser/g4/gen/api"
-	"github.com/sliveryou/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser/g4/gen/api"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
 )
 
 type (

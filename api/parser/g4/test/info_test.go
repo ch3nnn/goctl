@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/api/parser/g4/ast"
-	"github.com/sliveryou/goctl/api/parser/g4/gen/api"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser/g4/ast"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser/g4/gen/api"
 )
 
 var infoAccept = func(p *api.ApiParserParser, visitor *ast.ApiVisitor) any {

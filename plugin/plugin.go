@@ -14,10 +14,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/api/parser"
-	"github.com/sliveryou/goctl/api/spec"
-	"github.com/sliveryou/goctl/rpc/execx"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const pluginArg = "_plugin"

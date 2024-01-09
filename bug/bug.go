@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/internal/version"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/version"
 )
 
 const (

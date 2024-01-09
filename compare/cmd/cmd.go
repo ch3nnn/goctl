@@ -3,8 +3,8 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/compare/testdata"
-	"github.com/sliveryou/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/compare/testdata"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
 )
 
 var rootCmd = &cobra.Command{

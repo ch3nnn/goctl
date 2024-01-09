@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 //go:embed request.ts
@@ -22,5 +22,5 @@ func genRequest(dir string) error {
 		return nil
 	}
 
-	return os.WriteFile(filename, []byte(requestTemplate), 0644)
+	return os.WriteFile(filename, []byte(requestTemplate), 0o644)
 }

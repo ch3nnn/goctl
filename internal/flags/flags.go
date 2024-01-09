@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sliveryou/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
 )
 
 //go:embed default_en.json
@@ -28,7 +28,7 @@ func (cl *ConfigLoader) GetString(key string) string {
 	keyList := strings.FieldsFunc(key, func(r rune) bool {
 		return r == '.'
 	})
-	var conf = cl.conf
+	conf := cl.conf
 	for idx, k := range keyList {
 		val, ok := conf[k]
 		if !ok {

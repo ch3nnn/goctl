@@ -8,8 +8,8 @@ import (
 	"github.com/logrusorgru/aurora"
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/api/spec"
-	"github.com/sliveryou/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
 )
 
 const (

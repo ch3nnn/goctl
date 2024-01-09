@@ -10,7 +10,7 @@ import (
 
 	"github.com/gookit/color"
 
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 type (

@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/sliveryou/goctl/util/ctx"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/ctx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 func GetParentPackage(dir string) (string, error) {

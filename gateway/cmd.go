@@ -7,9 +7,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/internal/cobrax"
-	"github.com/sliveryou/goctl/util/ctx"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/cobrax"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/ctx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 var (
@@ -52,10 +52,10 @@ func generateGateway(*cobra.Command, []string) error {
 		return err
 	}
 	etcFile := filepath.Join(etcDir, "gateway.yaml")
-	if err := os.WriteFile(etcFile, []byte(etcContent), 0644); err != nil {
+	if err := os.WriteFile(etcFile, []byte(etcContent), 0o644); err != nil {
 		return err
 	}
 
 	mainFile := filepath.Join(varStringDir, "main.go")
-	return os.WriteFile(mainFile, []byte(mainContent), 0644)
+	return os.WriteFile(mainFile, []byte(mainContent), 0o644)
 }

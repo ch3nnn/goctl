@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/vars"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/vars"
 )
 
 // RunFunc defines a function type of Run function

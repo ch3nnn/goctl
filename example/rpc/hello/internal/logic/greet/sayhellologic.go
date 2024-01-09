@@ -3,10 +3,10 @@ package greetlogic
 import (
 	"context"
 
-	"github.com/sliveryou/goctl/example/rpc/hello/internal/svc"
-	"github.com/sliveryou/goctl/example/rpc/hello/pb/hello"
-
 	"github.com/zeromicro/go-zero/core/logx"
+
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hello/internal/svc"
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hello/pb/hello"
 )
 
 type SayHelloLogic struct {

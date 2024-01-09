@@ -3,8 +3,8 @@ package ast
 import (
 	"strings"
 
-	"github.com/sliveryou/goctl/pkg/parser/api/token"
-	"github.com/sliveryou/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/token"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
 )
 
 // CommentGroup represents a list of comments.
@@ -12,7 +12,7 @@ type CommentGroup []*CommentStmt
 
 // List returns the list of comments.
 func (cg CommentGroup) List() []string {
-	var list = make([]string, 0, len(cg))
+	list := make([]string, 0, len(cg))
 	for _, v := range cg {
 		comment := v.Comment.Text
 		if util.IsEmptyStringOrWhiteSpace(comment) {

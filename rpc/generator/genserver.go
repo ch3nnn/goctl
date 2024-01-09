@@ -8,12 +8,12 @@ import (
 
 	"github.com/zeromicro/go-zero/core/collection"
 
-	conf "github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/rpc/parser"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	conf "gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 const functionTemplate = `
@@ -29,7 +29,8 @@ var serverTemplate string
 
 // GenServer generates rpc server file, which is an implementation of rpc server
 func (g *Generator) GenServer(ctx DirContext, proto parser.Proto, cfg *conf.Config,
-	c *ZRpcContext) error {
+	c *ZRpcContext,
+) error {
 	if !c.Multiple {
 		return g.genServerInCompatibility(ctx, proto, cfg, c)
 	}
@@ -106,7 +107,8 @@ func (g *Generator) genServerGroup(ctx DirContext, proto parser.Proto, cfg *conf
 }
 
 func (g *Generator) genServerInCompatibility(ctx DirContext, proto parser.Proto,
-	cfg *conf.Config, c *ZRpcContext) error {
+	cfg *conf.Config, c *ZRpcContext,
+) error {
 	dir := ctx.GetServer()
 	logicImport := fmt.Sprintf(`"%v"`, ctx.GetLogic().Package)
 	svcImport := fmt.Sprintf(`"%v"`, ctx.GetSvc().Package)

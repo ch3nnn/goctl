@@ -3,9 +3,9 @@ package gen
 import (
 	"fmt"
 
-	"github.com/sliveryou/goctl/model/sql/template"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/template"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 func genNew(table Table, withCache, postgreSql bool) (string, error) {

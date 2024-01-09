@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 //go:embed rpc.tpl

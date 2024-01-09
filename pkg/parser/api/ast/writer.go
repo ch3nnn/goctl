@@ -7,8 +7,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/sliveryou/goctl/pkg/parser/api/token"
-	"github.com/sliveryou/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/token"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
 )
 
 const (
@@ -38,13 +38,15 @@ type option struct {
 	rawText bool
 }
 
-type tokenNodeOption func(o *tokenNodeOpt)
-type tokenNodeOpt struct {
-	prefix               string
-	infix                string
-	ignoreHeadComment    bool
-	ignoreLeadingComment bool
-}
+type (
+	tokenNodeOption func(o *tokenNodeOpt)
+	tokenNodeOpt    struct {
+		prefix               string
+		infix                string
+		ignoreHeadComment    bool
+		ignoreLeadingComment bool
+	}
+)
 
 // WriteMode is the mode of writing.
 type WriteMode int
@@ -61,7 +63,7 @@ func transfer2TokenNode(node Node, isChild bool, opt ...tokenNodeOption) *TokenN
 		o(option)
 	}
 
-	var copyOpt = append([]tokenNodeOption(nil), opt...)
+	copyOpt := append([]tokenNodeOption(nil), opt...)
 	var tn *TokenNode
 	switch val := node.(type) {
 	case *AnyDataType:
@@ -172,7 +174,7 @@ func transfer2TokenNode(node Node, isChild bool, opt ...tokenNodeOption) *TokenN
 
 func transferNilInfixNode(nodes []*TokenNode, opt ...tokenNodeOption) *TokenNode {
 	result := &TokenNode{}
-	var option = new(tokenNodeOpt)
+	option := new(tokenNodeOpt)
 	for _, o := range opt {
 		o(option)
 	}
@@ -199,7 +201,7 @@ func transferNilInfixNode(nodes []*TokenNode, opt ...tokenNodeOption) *TokenNode
 
 func transferTokenNode(node *TokenNode, opt ...tokenNodeOption) *TokenNode {
 	result := &TokenNode{}
-	var option = new(tokenNodeOpt)
+	option := new(tokenNodeOpt)
 	for _, o := range opt {
 		o(option)
 	}
@@ -249,8 +251,8 @@ func withTokenNodePrefix(prefix ...string) tokenNodeOption {
 			o.prefix = p
 		}
 	}
-
 }
+
 func withTokenNodeInfix(infix string) tokenNodeOption {
 	return func(o *tokenNodeOpt) {
 		o.infix = infix
@@ -344,7 +346,7 @@ func (w *Writer) Write(opts ...Option) {
 		return
 	}
 
-	var opt = new(option)
+	opt := new(option)
 	opt.mode = ModeAuto
 	opt.prefix = NilIndent
 	opt.infix = WhiteSpace

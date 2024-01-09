@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
 )
 
 //go:embed testdata/test.api

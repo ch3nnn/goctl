@@ -12,11 +12,11 @@ import (
 
 	"github.com/zeromicro/go-zero/core/collection"
 
-	"github.com/sliveryou/goctl/api/spec"
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/vars"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/vars"
 )
 
 const (

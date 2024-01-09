@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/pkg/env"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/env"
 )
 
 func write(_ *cobra.Command, args []string) error {

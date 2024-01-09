@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/model/sql/model"
-	"github.com/sliveryou/goctl/model/sql/util"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/model"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 func TestParsePlainText(t *testing.T) {

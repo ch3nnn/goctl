@@ -10,8 +10,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/vars"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/vars"
 )
 
 func TestLookUpGo(t *testing.T) {

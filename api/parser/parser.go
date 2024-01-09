@@ -5,11 +5,11 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"github.com/sliveryou/goctl/api/parser/g4/ast"
-	"github.com/sliveryou/goctl/api/parser/g4/gen/api"
-	"github.com/sliveryou/goctl/api/spec"
-	"github.com/sliveryou/goctl/pkg/env"
-	apiParser "github.com/sliveryou/goctl/pkg/parser/api/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser/g4/ast"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser/g4/gen/api"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/env"
+	apiParser "gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/parser"
 )
 
 type parser struct {

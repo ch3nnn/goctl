@@ -9,8 +9,8 @@ import (
 	"github.com/gookit/color"
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const (

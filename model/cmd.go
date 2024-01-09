@@ -1,9 +1,9 @@
 package model
 
 import (
-	"github.com/sliveryou/goctl/internal/cobrax"
-	"github.com/sliveryou/goctl/model/mongo"
-	"github.com/sliveryou/goctl/model/sql/command"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/cobrax"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/mongo"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/command"
 )
 
 var (

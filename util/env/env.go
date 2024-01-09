@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sliveryou/goctl/vars"
+	"gitlab.bolean.com/sa-micro-team/goctl/vars"
 )
 
 const (

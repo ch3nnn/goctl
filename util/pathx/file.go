@@ -14,7 +14,7 @@ import (
 
 	"github.com/gookit/color"
 
-	"github.com/sliveryou/goctl/internal/version"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/version"
 )
 
 // NL defines a new line.

@@ -9,9 +9,9 @@ import (
 
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/api/spec"
-	apiutil "github.com/sliveryou/goctl/api/util"
-	"github.com/sliveryou/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	apiutil "gitlab.bolean.com/sa-micro-team/goctl/api/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
 )
 
 //go:embed packet.tpl

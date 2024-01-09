@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	conf "github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/rpc/parser"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
+	conf "gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 //go:embed main.tpl
@@ -24,7 +24,8 @@ type MainServiceTemplateData struct {
 
 // GenMain generates the main file of the rpc service, which is an rpc service program call entry
 func (g *Generator) GenMain(ctx DirContext, proto parser.Proto, cfg *conf.Config,
-	c *ZRpcContext) error {
+	c *ZRpcContext,
+) error {
 	mainFilename, err := format.FileNamingFormat(cfg.NamingFormat, ctx.GetServiceName().Source())
 	if err != nil {
 		return err

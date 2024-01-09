@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/sliveryou/goctl/model/sql/template"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/template"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 type findOneCode struct {

@@ -8,12 +8,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sliveryou/goctl/pkg/downloader"
-	"github.com/sliveryou/goctl/pkg/goctl"
-	"github.com/sliveryou/goctl/rpc/execx"
-	"github.com/sliveryou/goctl/util/env"
-	"github.com/sliveryou/goctl/util/zipx"
-	"github.com/sliveryou/goctl/vars"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/downloader"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/goctl"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/env"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/zipx"
+	"gitlab.bolean.com/sa-micro-team/goctl/vars"
 )
 
 var url = map[string]string{

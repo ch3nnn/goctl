@@ -7,7 +7,7 @@ import (
 
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
 )
 
 const (

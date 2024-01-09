@@ -8,9 +8,9 @@ import (
 
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/rpc/execx"
-	"github.com/sliveryou/goctl/util/console"
-	"github.com/sliveryou/goctl/util/ctx"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/ctx"
 )
 
 const (

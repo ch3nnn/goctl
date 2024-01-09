@@ -3,8 +3,8 @@ package generate
 import (
 	"fmt"
 
-	"github.com/sliveryou/goctl/model/mongo/template"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/mongo/template"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const (

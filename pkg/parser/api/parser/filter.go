@@ -1,8 +1,8 @@
 package parser
 
 import (
-	"github.com/sliveryou/goctl/pkg/parser/api/ast"
-	"github.com/sliveryou/goctl/pkg/parser/api/placeholder"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/ast"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/placeholder"
 )
 
 type filterBuilder struct {
@@ -47,7 +47,7 @@ func (f *filter) error() error {
 	if len(f.builders) == 0 {
 		return nil
 	}
-	var errorManager = newErrorManager()
+	errorManager := newErrorManager()
 	for _, b := range f.builders {
 		errorManager.add(b.error())
 	}

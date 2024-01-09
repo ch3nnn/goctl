@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/sliveryou/goctl/api/parser/g4/gen/api"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser/g4/gen/api"
 )
 
 // Service describes service for api syntax

@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sliveryou/goctl/util/env"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/env"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 func CloneIntoGitHome(url, branch string) (dir string, err error) {

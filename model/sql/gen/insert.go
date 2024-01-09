@@ -7,10 +7,10 @@ import (
 
 	"github.com/zeromicro/go-zero/core/collection"
 
-	"github.com/sliveryou/goctl/model/sql/template"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/template"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 func genInsert(table Table, withCache, postgreSql bool) (string, string, error) {

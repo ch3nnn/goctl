@@ -10,9 +10,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/model/sql/gen"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/gen"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 var (

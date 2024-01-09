@@ -8,9 +8,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/sliveryou/goctl/util/console"
-	"github.com/sliveryou/goctl/util/ctx"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/ctx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const baseDir = "greet"

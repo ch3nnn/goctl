@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/sliveryou/goctl/model/sql/parser"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 // Key describes cache key

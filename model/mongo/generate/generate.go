@@ -4,12 +4,12 @@ import (
 	"errors"
 	"path/filepath"
 
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/model/mongo/template"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/mongo/template"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 // Context defines the model generation data what they needs

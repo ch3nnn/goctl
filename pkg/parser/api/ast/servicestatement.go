@@ -1,6 +1,8 @@
 package ast
 
-import "github.com/sliveryou/goctl/pkg/parser/api/token"
+import (
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/token"
+)
 
 // AtServerStmt represents @server statement.
 type AtServerStmt struct {

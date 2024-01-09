@@ -10,11 +10,11 @@ import (
 
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/api/spec"
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const defaultLogicPackage = "logic"
@@ -128,7 +128,8 @@ func genHandler(dir, rootPkg, srvName string, cfg *config.Config, group spec.Gro
 }
 
 func doGenToFile(dir, handler string, cfg *config.Config, group spec.Group,
-	route spec.Route, handleObj handlerInfo) error {
+	route spec.Route, handleObj handlerInfo,
+) error {
 	filename, err := format.FileNamingFormat(cfg.NamingFormat, handler)
 	if err != nil {
 		return err
@@ -326,7 +327,7 @@ func getDataType(dataType string) string {
 
 func convertSpec(t spec.Type) spec.Type {
 	var tt spec.PointerType
-	var ok = true
+	ok := true
 
 	for ok {
 		tt, ok = t.(spec.PointerType)

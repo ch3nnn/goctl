@@ -6,10 +6,10 @@ package client
 import (
 	"context"
 
-	"github.com/sliveryou/goctl/example/rpc/hi/pb/hi"
-
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"
+
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/pb/hi"
 )
 
 type (

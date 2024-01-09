@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/rpc/execx"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 func TestIsGoMod(t *testing.T) {

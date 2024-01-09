@@ -9,10 +9,10 @@ import (
 
 	"github.com/zeromicro/go-zero/core/collection"
 
-	"github.com/sliveryou/goctl/api/spec"
-	"github.com/sliveryou/goctl/api/util"
-	"github.com/sliveryou/goctl/pkg/golang"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/golang"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 type fileGenConfig struct {

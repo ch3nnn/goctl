@@ -1,4 +1,4 @@
-module github.com/sliveryou/goctl
+module gitlab.bolean.com/sa-micro-team/goctl
 
 go 1.19
 

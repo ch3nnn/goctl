@@ -14,11 +14,11 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/errorx"
 
-	"github.com/sliveryou/goctl/api/parser"
-	"github.com/sliveryou/goctl/api/util"
-	"github.com/sliveryou/goctl/pkg/env"
-	apiF "github.com/sliveryou/goctl/pkg/parser/api/format"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/env"
+	apiF "gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const (

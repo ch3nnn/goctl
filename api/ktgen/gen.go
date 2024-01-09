@@ -9,7 +9,7 @@ import (
 
 	"github.com/iancoleman/strcase"
 
-	"github.com/sliveryou/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
 )
 
 var (

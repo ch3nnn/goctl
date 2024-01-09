@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/pkg/parser/api/assertx"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/assertx"
 )
 
 func Test_Parse(t *testing.T) {
@@ -30,7 +30,7 @@ func Test_Parse(t *testing.T) {
 				continue
 			}
 			filename := filepath.Join(t.TempDir(), fmt.Sprintf("invalid%d.api", idx))
-			err := os.WriteFile(filename, split, 0666)
+			err := os.WriteFile(filename, split, 0o666)
 			assert.NoError(t, err)
 			testFile = append(testFile, filename)
 		}

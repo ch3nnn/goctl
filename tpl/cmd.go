@@ -1,6 +1,8 @@
 package tpl
 
-import "github.com/sliveryou/goctl/internal/cobrax"
+import (
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/cobrax"
+)
 
 var (
 	varStringHome     string

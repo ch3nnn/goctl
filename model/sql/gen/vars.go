@@ -7,10 +7,10 @@ import (
 
 	"github.com/zeromicro/go-zero/core/collection"
 
-	"github.com/sliveryou/goctl/model/sql/template"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/template"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 func genVars(table Table, withCache, postgreSql bool) (string, error) {
@@ -37,7 +37,7 @@ func genVars(table Table, withCache, postgreSql bool) (string, error) {
 		"postgreSql":            postgreSql,
 		"data":                  table,
 		"ignoreColumns": func() string {
-			var set = collection.NewSet()
+			set := collection.NewSet()
 			for _, c := range table.ignoreColumns {
 				if postgreSql {
 					set.AddStr(fmt.Sprintf(`"%s"`, c))

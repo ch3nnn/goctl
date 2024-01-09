@@ -7,7 +7,7 @@ import (
 
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
 )
 
 var (

@@ -5,7 +5,7 @@ package name
 import (
 	"strings"
 
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 // NamingStyle the type of string

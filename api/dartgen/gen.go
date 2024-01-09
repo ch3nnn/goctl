@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/sliveryou/goctl/api/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser"
 )
 
 var (

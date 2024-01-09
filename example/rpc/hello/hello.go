@@ -4,16 +4,16 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/sliveryou/goctl/example/rpc/hello/internal/config"
-	greetServer "github.com/sliveryou/goctl/example/rpc/hello/internal/server/greet"
-	"github.com/sliveryou/goctl/example/rpc/hello/internal/svc"
-	"github.com/sliveryou/goctl/example/rpc/hello/pb/hello"
-
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
+
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hello/internal/config"
+	greetServer "gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hello/internal/server/greet"
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hello/internal/svc"
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hello/pb/hello"
 )
 
 var configFile = flag.String("f", "etc/hello.yaml", "the config file")

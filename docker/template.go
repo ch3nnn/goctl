@@ -3,7 +3,7 @@ package docker
 import (
 	_ "embed"
 
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const (

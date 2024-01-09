@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/DATA-DOG/go-sqlmock"
+	sqlmock "github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/assert"
 	"github.com/zeromicro/go-zero/core/stores/cache"
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/go-zero/core/stores/redis/redistest"
 
-	mocksql "github.com/sliveryou/goctl/model/sql/test"
+	mocksql "gitlab.bolean.com/sa-micro-team/goctl/model/sql/test"
 )
 
 func TestStudentModel(t *testing.T) {

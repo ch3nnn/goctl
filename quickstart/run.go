@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/sliveryou/goctl/util/env"
-	"github.com/sliveryou/goctl/vars"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/env"
+	"gitlab.bolean.com/sa-micro-team/goctl/vars"
 )
 
 const goproxy = "GOPROXY=https://goproxy.cn,direct"

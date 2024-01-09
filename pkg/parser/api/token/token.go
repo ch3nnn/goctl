@@ -3,8 +3,8 @@ package token
 import (
 	"fmt"
 
-	"github.com/sliveryou/goctl/pkg/parser/api/placeholder"
-	"github.com/sliveryou/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/placeholder"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
 )
 
 const (

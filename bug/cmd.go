@@ -3,7 +3,7 @@ package bug
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/internal/cobrax"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/cobrax"
 )
 
 // Cmd describes a bug command.

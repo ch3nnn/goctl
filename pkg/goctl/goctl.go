@@ -4,10 +4,10 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/sliveryou/goctl/pkg/golang"
-	"github.com/sliveryou/goctl/util/console"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/vars"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/golang"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/vars"
 )
 
 func Install(cacheDir, name string, installFn func(dest string) (string, error)) (string, error) {

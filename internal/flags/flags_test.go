@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/sliveryou/goctl/test"
+	"gitlab.bolean.com/sa-micro-team/goctl/test"
 )
 
 func TestFlags_Get(t *testing.T) {

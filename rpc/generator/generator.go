@@ -3,9 +3,9 @@ package generator
 import (
 	"log"
 
-	conf "github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/env"
-	"github.com/sliveryou/goctl/util/console"
+	conf "gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/env"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
 )
 
 // Generator defines the environment needs of rpc service generation

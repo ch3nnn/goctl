@@ -10,8 +10,8 @@ import (
 	"github.com/zeromicro/go-zero/core/hash"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/sliveryou/goctl/update/config"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/update/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const (

@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sliveryou/goctl/pkg/parser/api/assertx"
-	"github.com/sliveryou/goctl/pkg/parser/api/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/assertx"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/parser"
 )
 
 type formatData struct {
@@ -825,7 +825,6 @@ type /*bb*/ P /*cc*/ *[...]int // dd`,
 				expected: `type P /*aa*/ *map[[2]int]int // bb`,
 			},
 		})
-
 	})
 
 	t.Run("slice", func(t *testing.T) {
@@ -1487,7 +1486,7 @@ func testRun(t *testing.T, testData []formatData) {
 		buffer := bytes.NewBuffer(nil)
 		err := formatForUnitTest([]byte(v.input), buffer)
 		assert.NoError(t, err)
-		var result = buffer.String()
+		result := buffer.String()
 		if v.converter != nil {
 			result = v.converter(result)
 		}

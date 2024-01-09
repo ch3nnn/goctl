@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/sliveryou/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
 )
 
 // GenPb generates the pb.go file, which is a layer of packaging for protoc to generate gprc,
@@ -62,7 +62,7 @@ const (
 	grpcSuffix = "_grpc.pb.go"
 )
 
-func findPbFile(current string, src string, grpc bool) (string, error) {
+func findPbFile(current, src string, grpc bool) (string, error) {
 	protoName := strings.TrimSuffix(filepath.Base(src), filepath.Ext(src))
 	pbFile := protoName + "." + pbSuffix
 	grpcFile := protoName + grpcSuffix

@@ -10,12 +10,12 @@ import (
 	"github.com/emicklei/proto"
 	"github.com/zeromicro/go-zero/core/collection"
 
-	conf "github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/rpc/parser"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	conf "gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 const (
@@ -37,7 +37,8 @@ var callTemplateText string
 // GenCall generates the rpc client code, which is the entry point for the rpc service call.
 // It is a layer of encapsulation for the rpc client and shields the details in the pb.
 func (g *Generator) GenCall(ctx DirContext, proto parser.Proto, cfg *conf.Config,
-	c *ZRpcContext) error {
+	c *ZRpcContext,
+) error {
 	if !c.Multiple {
 		return g.genCallInCompatibility(ctx, proto, cfg)
 	}
@@ -123,7 +124,8 @@ func (g *Generator) genCallGroup(ctx DirContext, proto parser.Proto, cfg *conf.C
 }
 
 func (g *Generator) genCallInCompatibility(ctx DirContext, proto parser.Proto,
-	cfg *conf.Config) error {
+	cfg *conf.Config,
+) error {
 	dir := ctx.GetCall()
 	service := proto.Service[0]
 	head := util.GetHead(proto.Name)
@@ -212,8 +214,9 @@ func getMessageName(msg proto.Message) string {
 	return strings.Join(list, "_")
 }
 
-func (g *Generator) genFunction(goPackage string, serviceName string, service parser.Service,
-	isCallPkgSameToGrpcPkg bool) ([]string, error) {
+func (g *Generator) genFunction(goPackage, serviceName string, service parser.Service,
+	isCallPkgSameToGrpcPkg bool,
+) ([]string, error) {
 	functions := make([]string, 0)
 
 	for _, rpc := range service.RPC {
@@ -254,7 +257,8 @@ func (g *Generator) genFunction(goPackage string, serviceName string, service pa
 }
 
 func (g *Generator) getInterfaceFuncs(goPackage string, service parser.Service,
-	isCallPkgSameToGrpcPkg bool) ([]string, error) {
+	isCallPkgSameToGrpcPkg bool,
+) ([]string, error) {
 	functions := make([]string, 0)
 
 	for _, rpc := range service.RPC {

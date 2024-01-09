@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/sliveryou/goctl/pkg/parser/api/token"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/token"
 )
 
 const (
@@ -151,7 +151,7 @@ func (s *Scanner) peekRune() rune {
 
 func (s *Scanner) scanString(delim rune, tp token.Type) (token.Token, error) {
 	position := s.position
-	var stringMode = initMode
+	stringMode := initMode
 	for {
 		switch s.ch {
 		case delim:
@@ -299,7 +299,6 @@ func (s *Scanner) scanMicrosecond(bgPos int) token.Token {
 	}
 
 	return s.scanNanosecond(bgPos)
-
 }
 
 func (s *Scanner) scanMillisecondOrMinute(bgPos int) token.Token {
@@ -495,7 +494,7 @@ func (s *Scanner) scanLineComment() token.Token {
 
 func (s *Scanner) scanDocument() (token.Token, error) {
 	position := s.position
-	var documentMode = initMode
+	documentMode := initMode
 	for {
 		switch s.ch {
 		case '*':

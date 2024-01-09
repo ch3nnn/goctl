@@ -4,17 +4,17 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/sliveryou/goctl/example/rpc/hi/internal/config"
-	eventServer "github.com/sliveryou/goctl/example/rpc/hi/internal/server/event"
-	greetServer "github.com/sliveryou/goctl/example/rpc/hi/internal/server/greet"
-	"github.com/sliveryou/goctl/example/rpc/hi/internal/svc"
-	"github.com/sliveryou/goctl/example/rpc/hi/pb/hi"
-
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
+
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/internal/config"
+	eventServer "gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/internal/server/event"
+	greetServer "gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/internal/server/greet"
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/internal/svc"
+	"gitlab.bolean.com/sa-micro-team/goctl/example/rpc/hi/pb/hi"
 )
 
 var configFile = flag.String("f", "etc/hi.yaml", "the config file")

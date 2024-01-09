@@ -7,11 +7,11 @@ import (
 
 	"github.com/zeromicro/go-zero/core/lang"
 
-	"github.com/sliveryou/goctl/api/spec"
-	"github.com/sliveryou/goctl/pkg/parser/api/ast"
-	"github.com/sliveryou/goctl/pkg/parser/api/importstack"
-	"github.com/sliveryou/goctl/pkg/parser/api/placeholder"
-	"github.com/sliveryou/goctl/pkg/parser/api/token"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/ast"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/importstack"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/placeholder"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/token"
 )
 
 // Analyzer analyzes the ast and converts it to spec.
@@ -148,7 +148,7 @@ func (a *Analyzer) convertAtDoc(atDoc ast.AtDocStmt) spec.AtDoc {
 }
 
 func (a *Analyzer) convertKV(kv []*ast.KVExpr) map[string]string {
-	var ret = map[string]string{}
+	ret := map[string]string{}
 	for _, v := range kv {
 		key := strings.TrimSuffix(v.Key.Token.Text, ":")
 		ret[key] = v.Value.Token.Text
@@ -355,7 +355,7 @@ func (a *Analyzer) getType(expr *ast.BodyStmt) (spec.Type, error) {
 	body := expr.Body
 	var tp spec.Type
 	var err error
-	var rawText = body.Format("")
+	rawText := body.Format("")
 	if IsBaseType(body.Value.Token.Text) {
 		tp = spec.PrimitiveType{RawName: body.Value.Token.Text}
 	} else {
@@ -405,7 +405,7 @@ func Parse(filename string, src interface{}) (*spec.ApiSpec, error) {
 		return nil, err
 	}
 
-	var result = new(spec.ApiSpec)
+	result := new(spec.ApiSpec)
 	analyzer := Analyzer{
 		api:  api,
 		spec: result,

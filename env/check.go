@@ -7,11 +7,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sliveryou/goctl/pkg/env"
-	"github.com/sliveryou/goctl/pkg/protoc"
-	"github.com/sliveryou/goctl/pkg/protocgengo"
-	"github.com/sliveryou/goctl/pkg/protocgengogrpc"
-	"github.com/sliveryou/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/env"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/protoc"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/protocgengo"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/protocgengogrpc"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
 )
 
 type bin struct {

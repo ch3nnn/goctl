@@ -3,7 +3,7 @@ package spec_test
 import (
 	"fmt"
 
-	"github.com/sliveryou/goctl/api/spec"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/spec"
 )
 
 func ExampleMember_GetEnumOptions() {

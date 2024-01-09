@@ -9,12 +9,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sliveryou/goctl/internal/version"
-	sortedmap "github.com/sliveryou/goctl/pkg/collection"
-	"github.com/sliveryou/goctl/pkg/protoc"
-	"github.com/sliveryou/goctl/pkg/protocgengo"
-	"github.com/sliveryou/goctl/pkg/protocgengogrpc"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/internal/version"
+	sortedmap "gitlab.bolean.com/sa-micro-team/goctl/pkg/collection"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/protoc"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/protocgengo"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/protocgengogrpc"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 var goctlEnv *sortedmap.SortedMap

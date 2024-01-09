@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/zeromicro/go-zero/core/stringx"
 
-	"github.com/sliveryou/goctl/rpc/execx"
-	"github.com/sliveryou/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/execx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 func TestProjectFromGoMod(t *testing.T) {
@@ -195,7 +195,6 @@ func TestDecodePackages(t *testing.T) {
 			}
 			if !reflect.DeepEqual(result, tt.want) {
 				t.Errorf("decodePackages() = %v,want  %v", result, tt.want)
-
 			}
 		})
 	}

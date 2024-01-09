@@ -15,13 +15,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	apiformat "github.com/sliveryou/goctl/api/format"
-	"github.com/sliveryou/goctl/api/parser"
-	apiutil "github.com/sliveryou/goctl/api/util"
-	"github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/pkg/golang"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/pathx"
+	apiformat "gitlab.bolean.com/sa-micro-team/goctl/api/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/api/parser"
+	apiutil "gitlab.bolean.com/sa-micro-team/goctl/api/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/pkg/golang"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
 )
 
 const tmpFile = "%s-%d"

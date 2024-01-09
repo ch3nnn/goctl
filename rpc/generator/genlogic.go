@@ -8,12 +8,12 @@ import (
 
 	"github.com/zeromicro/go-zero/core/collection"
 
-	conf "github.com/sliveryou/goctl/config"
-	"github.com/sliveryou/goctl/rpc/parser"
-	"github.com/sliveryou/goctl/util"
-	"github.com/sliveryou/goctl/util/format"
-	"github.com/sliveryou/goctl/util/pathx"
-	"github.com/sliveryou/goctl/util/stringx"
+	conf "gitlab.bolean.com/sa-micro-team/goctl/config"
+	"gitlab.bolean.com/sa-micro-team/goctl/rpc/parser"
+	"gitlab.bolean.com/sa-micro-team/goctl/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/format"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/pathx"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 const logicFunctionTemplate = `{{if .hasComment}}{{.comment}}{{end}}
@@ -29,7 +29,8 @@ var logicTemplate string
 
 // GenLogic generates the logic file of the rpc service, which corresponds to the RPC definition items in proto.
 func (g *Generator) GenLogic(ctx DirContext, proto parser.Proto, cfg *conf.Config,
-	c *ZRpcContext) error {
+	c *ZRpcContext,
+) error {
 	if !c.Multiple {
 		return g.genLogicInCompatibility(ctx, proto, cfg)
 	}
@@ -38,7 +39,8 @@ func (g *Generator) GenLogic(ctx DirContext, proto parser.Proto, cfg *conf.Confi
 }
 
 func (g *Generator) genLogicInCompatibility(ctx DirContext, proto parser.Proto,
-	cfg *conf.Config) error {
+	cfg *conf.Config,
+) error {
 	dir := ctx.GetLogic()
 	service := proto.Service[0].Service.Name
 	for _, rpc := range proto.Service[0].RPC {
@@ -143,7 +145,8 @@ func (g *Generator) genLogicGroup(ctx DirContext, proto parser.Proto, cfg *conf.
 
 func (g *Generator) genLogicFunction(serviceName, goPackage, logicName string,
 	rpc *parser.RPC) (string,
-	error) {
+	error,
+) {
 	functions := make([]string, 0)
 	text, err := pathx.LoadTemplate(category, logicFuncTemplateFileFile, logicFunctionTemplate)
 	if err != nil {

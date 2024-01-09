@@ -9,11 +9,11 @@ import (
 	"github.com/zeromicro/ddl-parser/parser"
 	"github.com/zeromicro/go-zero/core/collection"
 
-	"github.com/sliveryou/goctl/model/sql/converter"
-	"github.com/sliveryou/goctl/model/sql/model"
-	"github.com/sliveryou/goctl/model/sql/util"
-	"github.com/sliveryou/goctl/util/console"
-	"github.com/sliveryou/goctl/util/stringx"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/converter"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/model"
+	"gitlab.bolean.com/sa-micro-team/goctl/model/sql/util"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/console"
+	"gitlab.bolean.com/sa-micro-team/goctl/util/stringx"
 )
 
 const timeImport = "time.Time"
