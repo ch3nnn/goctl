@@ -58,7 +58,7 @@ func writeMessage(b *strings.Builder, t spec.Type) error {
 			}
 		}
 		if comment != "" {
-			comment = "  // " + comment
+			comment = " // " + comment
 		}
 		b.WriteString(fmt.Sprintf("%s%s%s%s %s = %d;%s\n",
 			indent, repeated, optional, mf.FieldType, mf.FieldName, i+1, comment))
