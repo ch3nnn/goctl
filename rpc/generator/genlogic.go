@@ -75,6 +75,8 @@ func (g *Generator) genLogicInCompatibility(ctx DirContext, proto parser.Proto,
 			"packageName": "logic",
 			"imports":     strings.Join(imports.KeysStr(), pathx.NL),
 			"comment":     comment,
+			"service":     service,
+			"method":      rpc.Name,
 		}, filename, false)
 		if err != nil {
 			return err
@@ -135,6 +137,8 @@ func (g *Generator) genLogicGroup(ctx DirContext, proto parser.Proto, cfg *conf.
 				"packageName": packageName,
 				"imports":     strings.Join(imports.KeysStr(), pathx.NL),
 				"comment":     comment,
+				"service":     serviceName,
+				"method":      rpc.Name,
 			}, filename, false); err != nil {
 				return err
 			}
