@@ -14,6 +14,8 @@ type {{.logic}} struct {
 // New{{.logic}} 新建{{.summary}}上下文
 func New{{.logic}}(ctx context.Context, svcCtx *svc.ServiceContext) *{{.logic}} {
 	return &{{.logic}}{
+		ctx:    ctx,
+		svcCtx: svcCtx,
 		Logger: logx.WithContext(ctx).WithFields(
 			logx.Field("service", svcCtx.Config.Name),
 			logx.Field("method", "{{.callName}}.{{.function}}"),
