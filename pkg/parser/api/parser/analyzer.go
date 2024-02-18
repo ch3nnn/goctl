@@ -148,7 +148,7 @@ func (a *Analyzer) convertAtDoc(atDoc ast.AtDocStmt) spec.AtDoc {
 }
 
 func (a *Analyzer) convertKV(kv []*ast.KVExpr) map[string]string {
-	ret := map[string]string{}
+	var ret = map[string]string{}
 	for _, v := range kv {
 		key := strings.TrimSuffix(v.Key.Token.Text, ":")
 		ret[key] = v.Value.Token.Text
@@ -355,7 +355,7 @@ func (a *Analyzer) getType(expr *ast.BodyStmt) (spec.Type, error) {
 	body := expr.Body
 	var tp spec.Type
 	var err error
-	rawText := body.Format("")
+	var rawText = body.Format("")
 	if IsBaseType(body.Value.Token.Text) {
 		tp = spec.PrimitiveType{RawName: body.Value.Token.Text}
 	} else {
@@ -404,8 +404,11 @@ func Parse(filename string, src interface{}) (*spec.ApiSpec, error) {
 	if err != nil {
 		return nil, err
 	}
+	if err := api.SelfCheck(); err != nil {
+		return nil, err
+	}
 
-	result := new(spec.ApiSpec)
+	var result = new(spec.ApiSpec)
 	analyzer := Analyzer{
 		api:  api,
 		spec: result,

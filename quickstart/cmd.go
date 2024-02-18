@@ -1,8 +1,6 @@
 package quickstart
 
-import (
-	"gitlab.bolean.com/sa-micro-team/goctl/internal/cobrax"
-)
+import "gitlab.bolean.com/sa-micro-team/goctl/internal/cobrax"
 
 const (
 	serviceTypeMono  = "mono"

@@ -58,8 +58,7 @@ type (
 )
 
 func mkdir(ctx *ctx.ProjectContext, proto parser.Proto, conf *conf.Config, c *ZRpcContext) (DirContext,
-	error,
-) {
+	error) {
 	inner := make(map[string]Dir)
 	etcDir := filepath.Join(ctx.WorkDir, "etc")
 	clientDir := filepath.Join(ctx.WorkDir, "client")
@@ -209,8 +208,7 @@ func mkdir(ctx *ctx.ProjectContext, proto parser.Proto, conf *conf.Config, c *ZR
 }
 
 func mkdirClient(ctx *ctx.ProjectContext, proto parser.Proto, conf *conf.Config, c *ZRpcContext) (DirContext,
-	error,
-) {
+	error) {
 	inner := make(map[string]Dir)
 	clientDir := filepath.Join(ctx.WorkDir, "client")
 	pbDir := filepath.Join(ctx.WorkDir, proto.GoPackage)

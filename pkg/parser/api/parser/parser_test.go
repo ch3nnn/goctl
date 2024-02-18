@@ -16,7 +16,7 @@ import (
 var testCommentInput string
 
 func TestParser_init(t *testing.T) {
-	testData := []string{
+	var testData = []string{
 		"`",
 		"@`",
 		"syntax/**/`",
@@ -39,7 +39,7 @@ func TestParser_Parse(t *testing.T) {
 		assert.True(t, p.hasNoErrors())
 	})
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			"foo bar",
 			"@",
 		}
@@ -52,8 +52,9 @@ func TestParser_Parse(t *testing.T) {
 }
 
 func TestParser_Parse_Mode(t *testing.T) {
+
 	t.Run("All", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`// foo`,
 			`// bar`,
 			`/*foo*/`,
@@ -74,7 +75,7 @@ func TestParser_Parse_Mode(t *testing.T) {
 
 func TestParser_Parse_syntaxStmt(t *testing.T) {
 	t.Run("valid", func(t *testing.T) {
-		testData := []struct {
+		var testData = []struct {
 			input    string
 			expected string
 		}{
@@ -103,7 +104,7 @@ func TestParser_Parse_syntaxStmt(t *testing.T) {
 		}
 	})
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`syntax`,
 			`syntax = `,
 			`syntax = ''`,
@@ -142,6 +143,7 @@ func TestParser_Parse_infoStmt(t *testing.T) {
 			expectedValue := expected[stmt.Key.Token.Text]
 			assert.Equal(t, expectedValue, actual)
 		}
+
 	})
 
 	t.Run("empty", func(t *testing.T) {
@@ -158,7 +160,7 @@ func TestParser_Parse_infoStmt(t *testing.T) {
 	})
 
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`info`,
 			`info(`,
 			`info{`,
@@ -188,7 +190,7 @@ var testImportLiteral string
 
 func TestParser_Parse_importLiteral(t *testing.T) {
 	t.Run("valid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`""`,
 			`"foo"`,
 			`"bar"`,
@@ -204,7 +206,7 @@ func TestParser_Parse_importLiteral(t *testing.T) {
 		}
 	})
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`import`,
 			`import "`,
 			`import "foo`,
@@ -226,7 +228,7 @@ var testImportGroup string
 
 func TestParser_Parse_importGroup(t *testing.T) {
 	t.Run("valid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`""`,
 			`"foo"`,
 			`"bar"`,
@@ -259,7 +261,7 @@ func TestParser_Parse_importGroup(t *testing.T) {
 	})
 
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`import`,
 			`import (`,
 			`import {`,
@@ -283,7 +285,7 @@ var atServerTestAPI string
 
 func TestParser_Parse_atServerStmt(t *testing.T) {
 	t.Run("valid", func(t *testing.T) {
-		expectedData := map[string]string{
+		var expectedData = map[string]string{
 			"foo:":        `bar`,
 			"bar:":        `baz`,
 			"baz:":        `foo`,
@@ -326,7 +328,7 @@ func TestParser_Parse_atServerStmt(t *testing.T) {
 	})
 
 	t.Run("invalidInSkipCommentMode", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`@server`,
 			`@server{`,
 			`@server(`,
@@ -357,7 +359,7 @@ func TestParser_Parse_atServerStmt(t *testing.T) {
 	})
 
 	t.Run("invalidWithNoSkipCommentMode", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`@server`,
 			`@server //foo`,
 			`@server /*foo*/`,
@@ -375,7 +377,7 @@ var atHandlerTestAPI string
 
 func TestParser_Parse_atHandler(t *testing.T) {
 	t.Run("valid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`@handler foo`,
 			`@handler foo1`,
 			`@handler _bar`,
@@ -393,7 +395,7 @@ func TestParser_Parse_atHandler(t *testing.T) {
 	})
 
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`@handler`,
 			`@handler 1`,
 			`@handler ""`,
@@ -414,7 +416,7 @@ var atDocLiteralTestAPI string
 
 func TestParser_Parse_atDocLiteral(t *testing.T) {
 	t.Run("validLiteral", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`""`,
 			`"foo"`,
 			`"bar"`,
@@ -432,7 +434,7 @@ func TestParser_Parse_atDocLiteral(t *testing.T) {
 	})
 
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`@doc`,
 			`@doc "`,
 			`@doc $`,
@@ -452,7 +454,7 @@ var atDocGroupTestAPI string
 
 func TestParser_Parse_atDocGroup(t *testing.T) {
 	t.Run("valid", func(t *testing.T) {
-		testData := `@doc (
+		var testData = `@doc (
 	foo: "foo"
 	bar: "bar"
 	baz: ""
@@ -467,7 +469,7 @@ func TestParser_Parse_atDocGroup(t *testing.T) {
 	})
 
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`@doc{`,
 			`@doc(`,
 			`@doc(}`,
@@ -511,7 +513,7 @@ func TestParser_Parse_service(t *testing.T) {
 	}
 
 	t.Run("valid", func(t *testing.T) {
-		testData := []*ast.ServiceStmt{
+		var testData = []*ast.ServiceStmt{
 			{
 				Service: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "service"}),
 				Name: &ast.ServiceNameExpr{
@@ -520,6 +522,19 @@ func TestParser_Parse_service(t *testing.T) {
 				LBrace: ast.NewTokenNode(token.Token{Type: token.LBRACE, Text: "{"}),
 				RBrace: ast.NewTokenNode(token.Token{Type: token.RBRACE, Text: "}"}),
 				Routes: []*ast.ServiceItemStmt{
+					{
+						AtHandler: &ast.AtHandlerStmt{
+							AtHandler: ast.NewTokenNode(token.Token{Type: token.AT_HANDLER, Text: "@handler"}),
+							Name:      ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "root"}),
+						},
+						Route: &ast.RouteStmt{
+							Method: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "get"}),
+							Path: &ast.PathExpr{Value: ast.NewTokenNode(token.Token{
+								Type: token.PATH,
+								Text: "/",
+							})},
+						},
+					},
 					{
 						AtHandler: &ast.AtHandlerStmt{
 							AtHandler: ast.NewTokenNode(token.Token{Type: token.AT_HANDLER, Text: "@handler"}),
@@ -556,6 +571,93 @@ func TestParser_Parse_service(t *testing.T) {
 				LBrace: ast.NewTokenNode(token.Token{Type: token.LBRACE, Text: "{"}),
 				RBrace: ast.NewTokenNode(token.Token{Type: token.RBRACE, Text: "}"}),
 				Routes: []*ast.ServiceItemStmt{
+					{
+						AtDoc: &ast.AtDocLiteralStmt{
+							AtDoc: ast.NewTokenNode(token.Token{Type: token.AT_DOC, Text: "@doc"}),
+							Value: ast.NewTokenNode(token.Token{Type: token.STRING, Text: `"bar"`}),
+						},
+						AtHandler: &ast.AtHandlerStmt{
+							AtHandler: ast.NewTokenNode(token.Token{Type: token.AT_HANDLER, Text: "@handler"}),
+							Name:      ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "root"}),
+						},
+						Route: &ast.RouteStmt{
+							Method: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "get"}),
+							Path: &ast.PathExpr{
+								Value: ast.NewTokenNode(token.Token{
+									Type: token.PATH,
+									Text: "/",
+								}),
+							},
+							Request: &ast.BodyStmt{
+								LParen: ast.NewTokenNode(token.Token{Type: token.LPAREN, Text: "("}),
+								Body: &ast.BodyExpr{
+									Value: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "Foo"}),
+								},
+								RParen: ast.NewTokenNode(token.Token{Type: token.RPAREN, Text: ")"}),
+							},
+						},
+					},
+					{
+						AtDoc: &ast.AtDocLiteralStmt{
+							AtDoc: ast.NewTokenNode(token.Token{Type: token.AT_DOC, Text: "@doc"}),
+							Value: ast.NewTokenNode(token.Token{Type: token.STRING, Text: `"bar"`}),
+						},
+						AtHandler: &ast.AtHandlerStmt{
+							AtHandler: ast.NewTokenNode(token.Token{Type: token.AT_HANDLER, Text: "@handler"}),
+							Name:      ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "root2"}),
+						},
+						Route: &ast.RouteStmt{
+							Method: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "get"}),
+							Path: &ast.PathExpr{
+								Value: ast.NewTokenNode(token.Token{
+									Type: token.PATH,
+									Text: "/",
+								}),
+							},
+							Returns: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "returns"}),
+							Response: &ast.BodyStmt{
+								LParen: ast.NewTokenNode(token.Token{Type: token.LPAREN, Text: "("}),
+								Body: &ast.BodyExpr{
+									Value: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "Foo"}),
+								},
+								RParen: ast.NewTokenNode(token.Token{Type: token.RPAREN, Text: ")"}),
+							},
+						},
+					},
+					{
+						AtDoc: &ast.AtDocLiteralStmt{
+							AtDoc: ast.NewTokenNode(token.Token{Type: token.AT_DOC, Text: "@doc"}),
+							Value: ast.NewTokenNode(token.Token{Type: token.STRING, Text: `"bar"`}),
+						},
+						AtHandler: &ast.AtHandlerStmt{
+							AtHandler: ast.NewTokenNode(token.Token{Type: token.AT_HANDLER, Text: "@handler"}),
+							Name:      ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "root3"}),
+						},
+						Route: &ast.RouteStmt{
+							Method: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "get"}),
+							Path: &ast.PathExpr{
+								Value: ast.NewTokenNode(token.Token{
+									Type: token.PATH,
+									Text: "/",
+								}),
+							},
+							Request: &ast.BodyStmt{
+								LParen: ast.NewTokenNode(token.Token{Type: token.LPAREN, Text: "("}),
+								Body: &ast.BodyExpr{
+									Value: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "Foo"}),
+								},
+								RParen: ast.NewTokenNode(token.Token{Type: token.RPAREN, Text: ")"}),
+							},
+							Returns: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "returns"}),
+							Response: &ast.BodyStmt{
+								LParen: ast.NewTokenNode(token.Token{Type: token.LPAREN, Text: "("}),
+								Body: &ast.BodyExpr{
+									Value: ast.NewTokenNode(token.Token{Type: token.IDENT, Text: "Bar"}),
+								},
+								RParen: ast.NewTokenNode(token.Token{Type: token.RPAREN, Text: ")"}),
+							},
+						},
+					},
 					{
 						AtDoc: &ast.AtDocLiteralStmt{
 							AtDoc: ast.NewTokenNode(token.Token{Type: token.AT_DOC, Text: "@doc"}),
@@ -821,7 +923,7 @@ func TestParser_Parse_service(t *testing.T) {
 	})
 
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`service`,
 			`service foo`,
 			`service -`,
@@ -882,7 +984,7 @@ func TestParser_Parse_service(t *testing.T) {
 	})
 
 	t.Run("invalidBeginWithAtServer", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			`@server(`,
 			`@server() service`,
 			`@server() foo`,
@@ -899,7 +1001,7 @@ func TestParser_Parse_service(t *testing.T) {
 
 func TestParser_Parse_pathItem(t *testing.T) {
 	t.Run("valid", func(t *testing.T) {
-		testData := []struct {
+		var testData = []struct {
 			input    string
 			expected string
 		}{
@@ -935,7 +1037,7 @@ func TestParser_Parse_pathItem(t *testing.T) {
 	})
 
 	t.Run("invalid", func(t *testing.T) {
-		testData := []string{
+		var testData = []string{
 			"-foo",
 			"foo-",
 			"foo-2",
@@ -965,7 +1067,7 @@ func TestParser_Parse_parseTypeStmt(t *testing.T) {
 		assert.Equal(t, expected.Format(""), actual.Format(""))
 	}
 	t.Run("parseTypeLiteralStmt", func(t *testing.T) {
-		testData := []struct {
+		var testData = []struct {
 			input    string
 			expected ast.TypeStmt
 		}{
@@ -1290,7 +1392,7 @@ func TestParser_Parse_parseTypeStmt(t *testing.T) {
 		}
 	})
 	t.Run("parseTypeGroupStmt", func(t *testing.T) {
-		testData := []struct {
+		var testData = []struct {
 			input    string
 			expected ast.TypeStmt
 		}{
@@ -1374,7 +1476,7 @@ func TestParser_Parse_parseTypeStmt(t *testing.T) {
 }
 
 func TestParser_Parse_parseTypeStmt_invalid(t *testing.T) {
-	testData := []string{
+	var testData = []string{
 		/**************** type literal stmt ****************/
 		"type",
 		"type @",

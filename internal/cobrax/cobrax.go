@@ -47,7 +47,7 @@ func (f *FlagSet) StringVar(p *string, name string) {
 	f.StringVarWithDefaultValue(p, name, "")
 }
 
-func (f *FlagSet) StringVarWithDefaultValue(p *string, name, value string) {
+func (f *FlagSet) StringVarWithDefaultValue(p *string, name string, value string) {
 	f.FlagSet.StringVar(p, name, value, "")
 }
 
@@ -55,7 +55,7 @@ func (f *FlagSet) StringVarP(p *string, name, shorthand string) {
 	f.StringVarPWithDefaultValue(p, name, shorthand, "")
 }
 
-func (f *FlagSet) StringVarPWithDefaultValue(p *string, name, shorthand, value string) {
+func (f *FlagSet) StringVarPWithDefaultValue(p *string, name, shorthand string, value string) {
 	f.FlagSet.StringVarP(p, name, shorthand, value, "")
 }
 

@@ -37,7 +37,7 @@ func genVars(table Table, withCache, postgreSql bool) (string, error) {
 		"postgreSql":            postgreSql,
 		"data":                  table,
 		"ignoreColumns": func() string {
-			set := collection.NewSet()
+			var set = collection.NewSet()
 			for _, c := range table.ignoreColumns {
 				if postgreSql {
 					set.AddStr(fmt.Sprintf(`"%s"`, c))

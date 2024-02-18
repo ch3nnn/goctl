@@ -30,7 +30,7 @@ func Test_Parse(t *testing.T) {
 				continue
 			}
 			filename := filepath.Join(t.TempDir(), fmt.Sprintf("invalid%d.api", idx))
-			err := os.WriteFile(filename, split, 0o666)
+			err := os.WriteFile(filename, split, 0666)
 			assert.NoError(t, err)
 			testFile = append(testFile, filename)
 		}
@@ -42,5 +42,9 @@ func Test_Parse(t *testing.T) {
 	t.Run("circleImport", func(t *testing.T) {
 		_, err := Parse("./testdata/base.api", nil)
 		assertx.Error(t, err)
+	})
+	t.Run("link_import", func(t *testing.T) {
+		_, err := Parse("./testdata/link_import.api", nil)
+		assert.Nil(t, err)
 	})
 }
