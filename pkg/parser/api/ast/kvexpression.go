@@ -1,8 +1,6 @@
 package ast
 
-import (
-	"gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/token"
-)
+import "gitlab.bolean.com/sa-micro-team/goctl/pkg/parser/api/token"
 
 // KVExpr is a key value expression.
 type KVExpr struct {

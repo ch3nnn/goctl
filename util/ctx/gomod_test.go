@@ -195,6 +195,7 @@ func TestDecodePackages(t *testing.T) {
 			}
 			if !reflect.DeepEqual(result, tt.want) {
 				t.Errorf("decodePackages() = %v,want  %v", result, tt.want)
+
 			}
 		})
 	}

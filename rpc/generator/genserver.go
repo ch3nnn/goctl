@@ -29,8 +29,7 @@ var serverTemplate string
 
 // GenServer generates rpc server file, which is an implementation of rpc server
 func (g *Generator) GenServer(ctx DirContext, proto parser.Proto, cfg *conf.Config,
-	c *ZRpcContext,
-) error {
+	c *ZRpcContext) error {
 	if !c.Multiple {
 		return g.genServerInCompatibility(ctx, proto, cfg, c)
 	}
@@ -107,8 +106,7 @@ func (g *Generator) genServerGroup(ctx DirContext, proto parser.Proto, cfg *conf
 }
 
 func (g *Generator) genServerInCompatibility(ctx DirContext, proto parser.Proto,
-	cfg *conf.Config, c *ZRpcContext,
-) error {
+	cfg *conf.Config, c *ZRpcContext) error {
 	dir := ctx.GetServer()
 	logicImport := fmt.Sprintf(`"%v"`, ctx.GetLogic().Package)
 	svcImport := fmt.Sprintf(`"%v"`, ctx.GetSvc().Package)

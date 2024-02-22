@@ -52,10 +52,10 @@ func generateGateway(*cobra.Command, []string) error {
 		return err
 	}
 	etcFile := filepath.Join(etcDir, "gateway.yaml")
-	if err := os.WriteFile(etcFile, []byte(etcContent), 0o644); err != nil {
+	if err := os.WriteFile(etcFile, []byte(etcContent), 0644); err != nil {
 		return err
 	}
 
 	mainFile := filepath.Join(varStringDir, "main.go")
-	return os.WriteFile(mainFile, []byte(mainContent), 0o644)
+	return os.WriteFile(mainFile, []byte(mainContent), 0644)
 }
